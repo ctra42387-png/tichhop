@@ -6,7 +6,7 @@ import { SYSTEM_INSTRUCTION } from "../constants";
 const MODEL_NAME = 'gemini-3-pro-preview';
 
 export const generateLessonPlan = async (config: ManualInputData): Promise<GeneratedLessonPlan> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
   
   const prompt = `
     Hãy soạn thảo Kế hoạch bài dạy cho bài: "${config.lessonName}"
